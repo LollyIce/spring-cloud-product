@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: product
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+  rabbitmq:
+    host: 47.101.197.240
+    port: 5672
+    password: guest
+    username: guest
+  zipkin:
+    base-url: http://47.101.197.240:9411/
+  sleuth:
+    sampler:
+      percentage: 1  #输出到zipkin页面的比例 1为百分百 默认0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.197.240:8761/eureka
+#关闭安全认证
+management:
+  security:
+    enabled: false
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
