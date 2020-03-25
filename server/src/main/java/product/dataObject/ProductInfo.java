@@ -54,4 +54,6 @@ public class ProductInfo {
 
     private String info;
 
+    private String image;
+
 }
