@@ -11,6 +11,7 @@ import product.dataObject.ProductCategory;
 import product.dataObject.ProductInfo;
 import product.service.ProductCategoryService;
 import product.service.ProductService;
+import product.userClient.UserClient;
 import product.utils.ResultVOUtil;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+
 
     /***
      * 1.查询所有在架的商品
@@ -90,4 +92,5 @@ public class ProductController {
     public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
         productService.decreaseStock(cartDTOList);
     }
+
 }

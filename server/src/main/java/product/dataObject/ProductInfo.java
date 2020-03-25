@@ -44,4 +44,14 @@ public class ProductInfo {
     //更新时间
     private Date updateTime;
 
+    private BigDecimal oldPrice;
+
+    //月售
+    private Integer sellCount;
+
+    //好评率
+    private Integer rating;
+
+    private String info;
+
 }
